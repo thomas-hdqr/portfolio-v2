@@ -8,3 +8,12 @@ Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 - responsive part // maybe redo the project with tailwind and next.js ?
 - improve the meta-title, meta-description, h1, h2 etc
 - deploy somewhere
+
+
+Refactoring code with Tailwindcss 
+https://transform.tools/css-to-tailwind
+
+stop with hero section
+
+
+fontSize

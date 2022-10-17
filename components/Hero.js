@@ -1,9 +1,11 @@
+import Image  from 'next/image';
+import arrow  from '/public/right-arrow-svgrepo-com.svg'
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 import { motion } from "framer-motion";
 
 
-export default function Homepage() {
+export default function Hero() {
 
 
     // For the "contact me" hover effect
@@ -35,16 +37,16 @@ export default function Homepage() {
 
 
     return (
-        <section className="homepage">
+        <section className="h-screen">
                     <Navbar />
                     <motion.div 
                     variants={textAnimation}
                     initial="hidden"
                     animate="show"
-                    className="homepage-text"
+                    className="pb-2 pl-16 pt-40 relative"
                     >
-                        <div className="homepage-title">
-                            <h1 className="title">
+                        <div className="">
+                            <h1 className="text-7xl font-medium">
                                 <motion.div
                                   variants={text}
                                 >
@@ -62,12 +64,12 @@ export default function Homepage() {
                                 </motion.div>
                             </h1>
                         </div>
-                            <div className="homepage-contact">
-                            <img className="arrow" src="./images/right-arrow-svgrepo-com.svg" alt=""></img>
+                            <div className="flex flex-row justify-start">
+                              <Image className="" src={arrow} alt="" with="28" height="28"  />
                                 <div 
                                 onMouseOver={handleMouseOver} 
                                 onMouseOut={handleMouseOut} 
-                                className="contactme" 
+                                className="cursor-pointer text-2xl" 
                                 onClick={() =>  navigator.clipboard.writeText('thomashaudiquer@gmail.com')}>
                                     {isHovering ? 'Copy email?' : 'Contact me'}
                                 </div>

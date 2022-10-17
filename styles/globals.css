@@ -4,29 +4,41 @@
 
 
 
-/* html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Satoshi', sans-serif;
 }
+
+p {
+  font-size: 1.375rem;
+}
+
+/* For the links styling */
 
 a {
-  color: inherit;
+  color: inherit; 
   text-decoration: none;
+  position: relative;
 }
 
-* {
-  box-sizing: border-box;
+/* Link animation (navbar) */
+
+a:hover {
+  color: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
+.navbar-menu a::before, .footer-menu a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
