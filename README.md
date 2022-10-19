@@ -3,7 +3,7 @@ Personal portfolio. 100% built from scratch
 Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 
 ####### Things to improve #######
-- set layout
+- project card to improve
 - add an animated background at the hero section
 - change the text with my own
 - responsive part // maybe redo the project with tailwind and next.js ?
