@@ -10,16 +10,16 @@ function Contact() {
             </div>
         </div>
         <div className="footer-menu flex flex-row justify-center pt-48">
-            <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">linkedin</a></p>
+            <p><a href="https://www.linkedin.com/in/thomas-jhdqr/" target="_blank" rel="noopener noreferrer">linkedin</a></p>
             <p>,</p>
             &nbsp;
-            <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">twitter</a></p>
+            <p><a href="https://twitter.com/thomashaudiquer" target="_blank" rel="noopener noreferrer">twitter</a></p>
             <p>,</p>
             &nbsp;
-            <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">github</a></p>
+            <p><a href="https://github.com/thomas-hdqr" target="_blank" rel="noopener noreferrer">github</a></p>
             <p>,</p>
             &nbsp;
-            <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">codepen</a></p>
+            <p><a href="https://codepen.io/thomas-hdqr" target="_blank" rel="noopener noreferrer">codepen</a></p>
         </div>
     </div>
   )
