@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 
+/* typography */
 
 body {
   font-family: 'Satoshi', sans-serif;
+}
+
+h2 {
+  font-size: 3.438rem;
+  font-weight: 700;
 }
 
 p {
