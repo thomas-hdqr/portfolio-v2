@@ -12,6 +12,12 @@
   };
 }
 
+@layer base {
+  html {
+    font-family: 'Satoshi', sans-serif;
+  }
+}
+
 /* typography */
 
 body {
