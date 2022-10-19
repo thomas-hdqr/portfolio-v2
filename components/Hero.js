@@ -32,10 +32,19 @@ function Hero() {
 
 
   return (
-    <div className="px-20 pt-10 h-screen">
+    <div className="px-20 pt-10 h-screen relative">
       <div>
         <Navbar />
       </div>
+
+      {/* blurry background */}
+      <div className="relative w-full max-w-lg">
+        <div className="absolute top-20 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-20 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-20 -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      </div>
+
+
       <motion.div
         variants={textAnimation}
         initial="hidden"
