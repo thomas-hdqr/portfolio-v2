@@ -6,7 +6,7 @@ function Contact() {
         <div className="">
             <h2 className="text-7xl">Want to work together?</h2>
             <div className="pt-20">
-              <a className="text-9xl break-words" href="mailto:thomashaudiquer@gmail.com">thomashaudiquer@<br/>gmail.com</a>
+              <a className="text-9xl break-words underline underline-offset-8" href="mailto:thomashaudiquer@gmail.com">thomashaudiquer@<br/>gmail.com</a>
             </div>
         </div>
         <div className="footer-menu flex flex-row justify-center pt-48">
