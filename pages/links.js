@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function Links() {
   return (
-    <div className="text-center sm:px-40 sm:py-20 py-5 h-screen bg-yellow-400">
+    <div className="text-center sm:px-40 sm:py-20 py-2 h-full bg-yellow-400">
 
         {/* Profile */}
         <div className="overflow-hidden rounded-2xl">
@@ -39,7 +39,7 @@ function Links() {
 
 
         {/* Links */}
-        <div className="">
+        <div className="sm:mx-[150px]">
             <div className="bg-red-500 mx-20 my-6 py-4 cursor-pointer border-2 border-black hover:scale-105 transform transition duration-300 ease-out">
                  <p className="text-xl font-bold">Buy Me A Coffee ☕️</p>
             </div>
