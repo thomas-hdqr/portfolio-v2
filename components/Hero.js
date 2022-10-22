@@ -51,7 +51,7 @@ function Hero() {
         animate="show"
       >
         <div className="py-40">
-          <h1 className="text-7xl font-semibold">
+          <h1 className="text-7xl font-normal">
             <motion.div
               variants={text}
             >
