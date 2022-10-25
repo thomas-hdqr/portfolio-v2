@@ -9,6 +9,7 @@ Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 - responsive part // maybe redo the project with tailwind and next.js ?
 - improve the meta-title, meta-description, h1, h2 etc
 - deploy somewhere
+- test
 
 
 Refactoring code with Tailwindcss 

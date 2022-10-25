@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 function Projectcard(props) {
   return (
-    <div className="w-[443px] border-2 border-black flex-none relative">
+    <div className="w-[443px] border-2 border-black flex-none relative scrollbar-hide">
     <Image src={props.project.image} alt={props.project.title} layout="fill" objectFit='cover'  />
     <p className="">{props.project.title}</p>
     <p className="">{props.project.description}</p>
