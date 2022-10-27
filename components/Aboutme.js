@@ -28,7 +28,26 @@ function Aboutme() {
             <p className="text-3xl">I am a front-end developer based in Paris, France. I work on different projects to make the web a better place.</p>
         </div>
         <div className="ml-32">
-          <p>My expertise is creativity, simplicity and sense for animations. My passion for web development started 2 years ago</p>
+          <p>My expertise is creativity, simplicity and sense for animations. My passion for web development started 2 years ago.</p>
+          <div className="pt-5">
+            <p>Here are some technologies I&apos;ve been working with recently: </p>
+            <div className="pt-2 grid grid-cols-2">
+              <div>
+                <p>HTML</p>
+                <p>JavaScript</p>
+                <p>React</p>
+                <p>React Native</p>
+                <p>Nextjs</p>
+              </div>
+              <div>
+                <p>CSS3</p>
+                <p>Tailwindcss</p>
+                <p>Framer Motion</p>
+                <p>ChakraUI</p>
+                <p>MaterialUI</p>
+              </div>
+          </div>
+          </div>
         </div>
       </div>
         <motion.div
