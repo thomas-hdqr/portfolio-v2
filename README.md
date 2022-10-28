@@ -8,3 +8,4 @@ Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 - change the text with my own
 - responsive part // maybe redo the project with tailwind and next.js ?
 
+test
