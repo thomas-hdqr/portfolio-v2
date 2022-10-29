@@ -1,6 +1,21 @@
 import Image from 'next/image'
 
+import React, { useState } from 'react'
+
+
+
 function Projectcard(props) {
+
+
+  // For the hover effect
+  const [isHovering, setIsHovering] = useState(false);
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   return (
     <div className="min-h-[640px] w-[443px] border-2 border-black flex-none relative scrollbar-hide">
       <Image src={props.project.image} alt={props.project.title} layout="fill" objectFit='cover'  />

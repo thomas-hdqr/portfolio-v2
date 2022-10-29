@@ -11,7 +11,6 @@ function Work() {
   />
 })
 
-
   return (
     <div id="work" className="pt-10">
         <h2 className="px-20">Recent work</h2>
