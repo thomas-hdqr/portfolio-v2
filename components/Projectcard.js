@@ -17,8 +17,13 @@ function Projectcard(props) {
   };
 
   return (
-    <div className="min-h-[640px] w-[443px] border-2 border-black flex-none relative scrollbar-hide">
-      <Image src={props.project.image} alt={props.project.title} layout="fill" objectFit='cover'  />
+    <div 
+    className="min-h-[640px] h-full w-[443px] border-2 border-black flex-none relative scrollbar-hide"
+    onMouseOver={handleMouseOver} 
+    onMouseOut={handleMouseOut} 
+    onClick={() => {props.project.link}}
+    >
+      {isHovering && <Image src={props.project.image} alt={props.project.title} layout="fill" objectFit='cover'  /> }
       <p className="">{props.project.title}</p>
       <p className="">{props.project.description}</p>
       <p className="">{props.project.tech}</p>
