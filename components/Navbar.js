@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <div className="flex flex-row justify-between sticky">
         <div className="">
-            <p>Thomas Haudiquer</p>
+            <p><a href="https://thomashaudiquer.com">Thomas Haudiquer</a></p>
         </div>
         <div className="navbar-menu flex flex-row">
             <p><a href="#work">work</a></p>

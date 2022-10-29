@@ -19,9 +19,6 @@ function Contact() {
             <p>,</p>
             &nbsp;
             <p><a href="https://github.com/thomas-hdqr" target="_blank" rel="noopener noreferrer">github</a></p>
-            <p>,</p>
-            &nbsp;
-            <p><a href="https://codepen.io/thomas-hdqr" target="_blank" rel="noopener noreferrer">codepen</a></p>
         </div>
     </div>
   )
