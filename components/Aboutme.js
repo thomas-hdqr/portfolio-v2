@@ -31,7 +31,7 @@ function Aboutme() {
           <p>My expertise is creativity, simplicity and sense for animations. My passion for web development started 2 years ago.</p>
           <div className="pt-5">
             <p>Here are some technologies I&apos;ve been working with recently: </p>
-            <div className="pt-2 grid grid-cols-2">
+            <div className="pt-5 grid grid-cols-2">
               <div>
                 <p>HTML</p>
                 <p>JavaScript</p>
