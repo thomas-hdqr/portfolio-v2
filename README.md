@@ -10,4 +10,5 @@ Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 - refactor the code
 
 ####### Charte graphique #######
-- espacement mobile
+- espacement horizontal: sm:px-20 px-10
+- espacement vertical: sm:py-40 py-20
