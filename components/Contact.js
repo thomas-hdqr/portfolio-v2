@@ -4,14 +4,14 @@ function Contact() {
 
 
   return (
-    <div id="contact" className="px-20 h-screen pt-20">
+    <div id="contact" className="sm:px-20 sm:h-screen pt-20 px-10">
         <div className="">
             <h2 className="text-7xl">Want to work together?</h2>
-            <div className="pt-20">
-              <a className="text-9xl break-words underline underline-offset-8" href="mailto:thomashaudiquer@gmail.com">thomashaudiquer@<br/>gmail.com</a>
+            <div className="sm:pt-20 pt-10">
+              <a className="sm:text-9xl text-5xl break-words underline underline-offset-8" href="mailto:thomashaudiquer@gmail.com">thomashaudiquer@<br/>gmail.com</a>
             </div>
         </div>
-        <div className="footer-menu flex flex-row justify-center pt-48">
+        <div className="footer-menu flex flex-row justify-center sm:pt-48 pt-24">
             <p><a href="https://www.linkedin.com/in/thomas-jhdqr/" target="_blank" rel="noopener noreferrer">linkedin</a></p>
             <p>,</p>
             &nbsp;
