@@ -21,8 +21,8 @@ function Aboutme() {
 
 
   return (
-    <div id="about" className="p-40">
-      <div className='flex place-content-evenly align-baseline'>
+    <div id="about" className="sm:p-40 p-20">
+      <div className='sm:flex sm:place-content-evenly sm:align-baseline'>
         <div>
             <p className="text-3xl pb-10">Thomas Haudiquer</p>
             <p className="text-3xl">I am a front-end developer based in Paris, France. I work on different projects to make the web a better place.</p>
