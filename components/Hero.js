@@ -32,7 +32,7 @@ function Hero() {
 
 
   return (
-    <div className="px-20 pt-10 h-screen relative">
+    <div className="sm:px-20 sm:pt-10 sm:h-screen relative px-10">
       <div>
         <Navbar />
       </div>
@@ -50,7 +50,7 @@ function Hero() {
         initial="hidden"
         animate="show"
       >
-        <div className="py-40">
+        <div className="sm:py-40 py-20">
           <h1 className="text-7xl font-normal">
             <motion.div
               variants={text}

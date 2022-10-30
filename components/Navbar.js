@@ -7,7 +7,7 @@ function Navbar() {
             <p><a href="https://thomashaudiquer.com">Thomas Haudiquer</a></p>
         </div>
         <div className="navbar-menu flex flex-row">
-            <p><a href="#work">work</a></p>
+            <p className=""><a href="#work">work</a></p>
             <p>,</p>
             &nbsp;
             <p><a href="#about">about</a></p>
