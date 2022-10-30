@@ -27,7 +27,7 @@ function Aboutme() {
             <p className="text-3xl pb-10">Thomas Haudiquer</p>
             <p className="text-3xl">I am a front-end developer based in Paris, France. I work on different projects to make the web a better place.</p>
         </div>
-        <div className="sm:ml-32">
+        <div className="sm:ml-32 pt-5 sm:pt-0">
           <p>My expertise is creativity, simplicity and sense for animations. My passion for web development started 2 years ago.</p>
           <div className="pt-5">
             <p>Here are some technologies I&apos;ve been working with recently: </p>
