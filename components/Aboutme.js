@@ -6,10 +6,17 @@ import { useInView } from "react-intersection-observer";
 function Aboutme() {
 
   // animation for my photo
-  const imageVariants = {
-    visible: { opacity: 1, transition: {ease: "easeOut", duration: 1 }, x: 0, y: 0, rotate: 6 },
-    hidden: { opacity: 0, x: 300, y: 250 }
-  };
+  let imageVariants = {};
+  if (typeof window !== "undefined") {
+  const isMobile = window.innerWidth < 768; //Add the width you want to check for here (now 768px)
+  if (!isMobile) {
+    imageVariants = {
+      visible: { opacity: 1, transition: {ease: "easeOut", duration: 1 }, x: 0, y: 0, rotate: 6 },
+      hidden: { opacity: 0, x: 300, y: 250 }
+    };
+  }
+}
+
 
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -62,5 +69,6 @@ function Aboutme() {
     </div>
   )
 }
+
 
 export default Aboutme

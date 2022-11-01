@@ -18,7 +18,7 @@ function Projectcard(props) {
 
   return (
     <div 
-    className="flex flex-col justify-between align-baseline min-h-[640px] h-full sm:w-[443px] w-full border-2 border-black flex-none relative scrollbar-hide"
+    className="flex flex-col justify-between align-baseline min-h-[640px] h-full sm:w-[443px] w-full border-t-2 border-r-2 border-b-2 border-black flex-none relative scrollbar-hide"
     onMouseOver={handleMouseOver} 
     onMouseOut={handleMouseOut} 
     onClick={() => {props.project.link}}
