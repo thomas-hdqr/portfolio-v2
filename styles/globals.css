@@ -65,14 +65,3 @@ a:hover::before {
   transform: scaleX(1);
 }
 
-
-/* custor cursor */
-
-.cursor-test {
-  background-color: #000;
-  color: rgb(224, 23, 23);
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  position: fixed;
-}
