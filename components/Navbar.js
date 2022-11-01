@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className="flex flex-row justify-between sticky">
+    <div className="hidden sm:flex flex-row justify-between sticky">
         <div className="">
             <p><a href="https://thomashaudiquer.com">Thomas Haudiquer</a></p>
         </div>
