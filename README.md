@@ -3,10 +3,10 @@ Personal portfolio. 100% built from scratch
 Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 
 ####### Things to improve #######
-- fix animation bug on banner
 - rajouter nouveau projet (Netflix)
 - project card to improve
 - custom cursor for contact page
+- "Contact me" part in 2 steps (contact me >> copy email >> email copied to clipboard)
 - responsive part
 - refactor the code
 
