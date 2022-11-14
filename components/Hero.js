@@ -17,18 +17,26 @@ function Hero() {
   };
 
 
-  // animation for the text
-  const textAnimation = {
-    show: { opacity: 1, 
-    transition: {staggerChildren: 0.2,}, 
-    x: 0, y: 0,},
-    hidden: { opacity: 0}
-  };
-  
-  const text = {
-    hidden: { opacity: 0, x: 0, y: 50,},
-    show: { opacity: 1, x: 0, y: 0, transition: {type: "spring", stiffness: 100, damping: 15}}
-  }
+// animation for the text  
+  let textAnimation = {}
+  let text = {}
+  if (typeof window !== "undefined") {
+    const isMobile = window.innerWidth < 768; //Add the width you want to check for here (now 768px)
+    if (!isMobile) {
+      textAnimation = {
+        show: { opacity: 1, 
+        transition: {staggerChildren: 0.2,}, 
+        x: 0, y: 0,},
+        hidden: { opacity: 0}
+      };
+      text = {
+        hidden: { opacity: 0, x: 0, y: 50,},
+        show: { opacity: 1, x: 0, y: 0, transition: {type: "spring", stiffness: 100, damping: 15}}
+    }
+  } 
+} 
+
+
 
 
   return (

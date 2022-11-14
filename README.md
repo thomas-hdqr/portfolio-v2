@@ -4,6 +4,7 @@ Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 
 ####### Things to improve #######
 - fix animation bug on banner
+- rajouter nouveau projet (Netflix)
 - project card to improve
 - custom cursor for contact page
 - responsive part
