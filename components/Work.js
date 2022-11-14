@@ -14,7 +14,7 @@ function Work() {
   return (
     <div id="work" className="pt-10 ">
         <h2 className="sm:px-20 px-10">Recent work</h2>
-        <div className="flex scrollbar-hide py-10 cursor-grab overflow-x-scroll">
+        <div className="flex scrollbar-none overflow-x-auto py-10 cursor-grab">
             {projectElements}
         </div>
     </div>

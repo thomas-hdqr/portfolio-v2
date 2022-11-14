@@ -1,5 +1,4 @@
 import Image from 'next/image'
-
 import React, { useState } from 'react'
 
 
@@ -18,7 +17,7 @@ function Projectcard(props) {
 
   return (
     <div 
-    className="flex flex-col justify-between align-baseline min-h-[640px] h-full sm:w-[443px] w-full border-t-2 border-r-2 border-b-2 border-black flex-none relative scrollbar-hide"
+    className="flex flex-col relative justify-between align-baseline min-h-[640px] h-full sm:w-[443px] w-full border-t-2 border-r-2 border-b-2 border-white flex-none hover:opacity-70"
     onMouseOver={handleMouseOver} 
     onMouseOut={handleMouseOut} 
     onClick={() => {props.project.link}}
@@ -26,8 +25,10 @@ function Projectcard(props) {
       {isHovering && 
         <Image src={props.project.image} className="object-cover" alt={props.project.title} layout="fill"  /> 
       }
-      <p className="text-3xl p-10">{props.project.title}</p>
-      <div>
+      <div className="">
+        <p className="text-3xl p-10">{props.project.title}</p>
+      </div>
+      <div className="">
         <p className="pt-10 px-10">{props.project.description}</p>
         <p className="px-10 text-base">{props.project.tech}</p>
       </div>
