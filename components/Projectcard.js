@@ -24,7 +24,7 @@ function Projectcard(props) {
     onClick={() => {props.project.link}}
     >
       {isHovering && 
-        <Image src={props.project.image} alt={props.project.title} layout="fill" objectFit='cover'  /> 
+        <Image src={props.project.image} className="object-cover" alt={props.project.title} layout="fill"  /> 
       }
       <p className="text-3xl p-10">{props.project.title}</p>
       <div>
