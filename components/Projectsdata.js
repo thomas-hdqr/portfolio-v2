@@ -3,12 +3,12 @@ export default [
 
     //image size should be 448cmx335cm
     {
-        id: 1,
-        image: "/hoobank.png",
-        title: "Hoobank",
-        description: "Build the homepage of a modern bank",
-        tech: "React.js, Tailwindcss",
-        link: "https://hoobank-bank-app.netlify.app/",
+        id: 6,
+        image: "/netflix-clone.png",
+        title: "Netflix",
+        description: "Creating the UI of Netflix",
+        tech: "React, Next.js, Tailwindcss, Firebase, Recoil",
+        link: "https://netflix-clone-thomas-hdqr.vercel.app/",
     },
     {
         id: 4,
@@ -25,6 +25,14 @@ export default [
         description: "A real estate app",
         tech: "React.js, Next.js, ChakraUI, RapidAPI",
         link: "https://thomas-realestate.vercel.app/",
+    },
+    {
+        id: 1,
+        image: "/hoobank.png",
+        title: "Hoobank",
+        description: "Build the homepage of a modern bank",
+        tech: "React.js, Tailwindcss",
+        link: "https://hoobank-bank-app.netlify.app/",
     },
     {
         id: 5,
