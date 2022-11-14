@@ -25,9 +25,9 @@ function Hero() {
     if (!isMobile) {
       textAnimation = {
         show: { opacity: 1, 
-        transition: {staggerChildren: 0.2,}, 
-        x: 0, y: 0,},
-        hidden: { opacity: 0}
+          transition: {staggerChildren: 0.2,}, 
+          x: 0, y: 0,},
+          hidden: { opacity: 0}
       };
       text = {
         hidden: { opacity: 0, x: 0, y: 50,},
@@ -78,7 +78,9 @@ function Hero() {
           </h1>
         </div>
         <div className="flex flex-row content-start space-x-5">
-          <Image src="/right-arrow-svgrepo-com.svg" alt="" width="30" height="30"/>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="font-white w-6 h-6 align-bottom mt-2">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
           <div 
             onMouseOver={handleMouseOver} 
             onMouseOut={handleMouseOut} 
