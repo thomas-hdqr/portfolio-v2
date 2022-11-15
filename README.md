@@ -9,6 +9,7 @@ Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 - animate h2
 - custom cursor for contact page
 - "Contact me" part in 2 steps (contact me >> copy email >> email copied to clipboard)
+- check if dark mode is possible
 - responsive part
 - refactor the code
 

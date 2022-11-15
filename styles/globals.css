@@ -15,8 +15,6 @@
 @layer base {
   html {
     font-family: 'Satoshi', sans-serif;
-    color: white;
-    background-color: #000;
   }
 }
 
@@ -53,7 +51,7 @@ a {
 /* Link animation (navbar) */
 
 a:hover {
-  color: #ffff;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-menu a::before, .footer-menu a::before {
@@ -64,7 +62,7 @@ a:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }

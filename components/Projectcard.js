@@ -17,13 +17,13 @@ function Projectcard(props) {
 
   return (
     <div 
-    className="flex flex-col relative justify-between align-baseline min-h-[640px] h-full sm:w-[443px] w-full border-t-2 border-r-2 border-b-2 border-white flex-none"
+    className="flex flex-col relative justify-between align-baseline min-h-[640px] h-full sm:w-[443px] w-full border-t-2 border-r-2 border-b-2 border-black flex-none"
     onMouseOver={handleMouseOver} 
     onMouseOut={handleMouseOut} 
     onClick={() => {props.project.link}}
     >
       {isHovering && 
-        <Image src={props.project.image} className="object-cover hover:opacity-70" alt={props.project.title} layout="fill"  /> 
+        <Image src={props.project.image} className="object-cover" alt={props.project.title} layout="fill"  /> 
       }
       <div className="">
         <p className="text-3xl p-10">{props.project.title}</p>
