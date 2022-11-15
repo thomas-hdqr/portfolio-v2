@@ -4,6 +4,7 @@ import Work from '../components/Work'
 import Aboutme from '../components/Aboutme'
 import Contact from '../components/Contact'
 
+
 export default function Home() {
   return (
     <div>
