@@ -12,7 +12,7 @@ function Contact() {
             </div>
         </div>
         <div className="footer-menu flex flex-row justify-center sm:pt-48 pt-24">
-            <p><a href="https://www.linkedin.com/in/thomas-jhdqr/" target="_blank" rel="noopener noreferrer">linkedin</a></p>
+            <p><a href="https://www.linkedin.com/in/thomashaudiquer/" target="_blank" rel="noopener noreferrer">linkedin</a></p>
             <p>,</p>
             &nbsp;
             <p><a href="https://twitter.com/thomashaudiquer" target="_blank" rel="noopener noreferrer">twitter</a></p>
