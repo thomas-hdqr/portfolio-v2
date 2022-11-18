@@ -8,7 +8,7 @@ export default [
         title: "Netflix",
         description: "Creating the UI of Netflix",
         tech: "React, Next.js, Tailwindcss, Firebase, Recoil",
-        link: "https://netflix-clone-thomas-hdqr.vercel.app/",
+        link: "https://video-ui-th.vercel.app/",
     },
     {
         id: 4,
