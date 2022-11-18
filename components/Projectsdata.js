@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default [
 
-    //image size should be 448cmx335cm
+    //image size should be 448cmx335cm ou 443x640
     {
         id: 6,
         image: "/netflix-clone.png",
