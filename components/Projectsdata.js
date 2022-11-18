@@ -16,7 +16,7 @@ export default [
         title: "A new Airbnb",
         description: "Building another version of Airbnb",
         tech: "React, Next.js, Tailwindcss, Mapbox",
-        link: "https://airbnb-clone-th.vercel.app/",
+        link: "https://tourism-ui-th.vercel.app/",
     },
     {
         id: 2,
