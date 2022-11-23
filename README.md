@@ -15,5 +15,3 @@ Made with Nextjs, Reactjs, Tailwindcss & Framer Motion
 ####### Charte graphique #######
 - espacement horizontal: sm:px-20 px-10
 - espacement vertical: sm:py-40 py-20
-
-what to do next ??
