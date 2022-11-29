@@ -4,9 +4,12 @@ import Script from 'next/script'
 
 
 function MyApp({ Component, pageProps }) {
+
+  const privateGtag = process.env.GOOGLE_ANALYTICS
+
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-G-H4MB4WY3C5"/>
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id={privateGtag}"/>
         <Script
         id='google-analytics'
         strategy="afterInteractive"
@@ -15,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-H4MB4WY3C5', {
+        gtag('config', '{privateGtag}', {
         page_path: window.location.pathname,
         });
         `,
