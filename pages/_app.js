@@ -5,27 +5,23 @@ import Script from 'next/script'
 
 function MyApp({ Component, pageProps }) {
 
-  const privateGtag = process.env.GOOGLE_ANALYTICS
 
   return (
+    <>
+      <Script strategy='lazyOnload' src="https://www.googletagmanager.com/gtag/js?id=G-H4MB4WY3C5"/>
+        <Script strategy='lazyOnload' id=''>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-H4MB4WY3C5');
+          `}
+        </Script>
     <ThemeProvider enableSystem={true} attribute="class">
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id={privateGtag}"/>
-        <Script
-        id='google-analytics'
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-        __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{privateGtag}', {
-        page_path: window.location.pathname,
-        });
-        `,
-        }}
-        />
         <Component {...pageProps} />
       </ThemeProvider>
+    </>
   )
 }
 
