@@ -9,11 +9,22 @@ function Hero() {
 
   // For the "contact me" hover effect
   const [isHovering, setIsHovering] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+
   const handleMouseOver = () => {
     setIsHovering(true);
   };
+
   const handleMouseOut = () => {
     setIsHovering(false);
+  };
+
+  const handleCopyClick = () => {
+    navigator.clipboard.writeText('thomashaudiquer@gmail.com');
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1000);
   };
 
 
@@ -81,12 +92,13 @@ function Hero() {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="font-white w-6 h-6 align-bottom mt-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
-          <div 
-            onMouseOver={handleMouseOver} 
-            onMouseOut={handleMouseOut} 
-            className="cursor-pointer text-3xl" 
-            onClick={() =>  navigator.clipboard.writeText('thomashaudiquer@gmail.com')}>
-                    {isHovering ? 'Copy email?' : 'Contact me'}
+          <div
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+            className="cursor-pointer text-3xl"
+            onClick={handleCopyClick}
+          >
+            {isCopied ? 'Email copied to clipboard!' : isHovering ? 'Copy email?' : 'Contact me'}
           </div>
         </div>
       </motion.div>
