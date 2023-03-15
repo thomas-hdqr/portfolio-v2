@@ -3,6 +3,14 @@ export default [
 
     //image size should be 448cmx335cm ou 443x640
     {
+        id: 7,
+        image: "/dalle_clone.png",
+        title: "AI Image Generator",
+        description: "Another version of Dall-E",
+        tech: "React, Tailwindcss, MongoDB, Node.js, Express.js and OpenAI API",
+        link: "https://dalle-clone-mddp.vercel.app/",
+    },
+    {
         id: 6,
         image: "/netflix-clone.png",
         title: "Netflix",
