@@ -1,4 +1,4 @@
-// this is a test
+// this is a test before production
 
 /* eslint-disable import/no-anonymous-default-export */
 export default [
