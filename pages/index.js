@@ -1,4 +1,4 @@
-// this is the main part 
+// this is the main part of the site
 
 import Head from 'next/head'
 import Hero from '../components/Hero'
