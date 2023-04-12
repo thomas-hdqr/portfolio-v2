@@ -1,4 +1,4 @@
-// this is 
+// this is the 
 
 import Head from 'next/head'
 import Hero from '../components/Hero'
