@@ -4,42 +4,42 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 const firstName = {
-    initial: {
-      y: 0,
+  initial: {
+    y: 0,
+  },
+  animate: {
+    y: 0,
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.04,
+      staggerDirection: -1,
     },
-    animate: {
-      y: 0,
-      transition: {
-        delayChildren: 0.6,
-        staggerChildren: 0.04,
-        staggerDirection: -1,
-      },
+  },
+};
+
+const lastName = {
+  initial: {
+    y: 0,
+  },
+  animate: {
+    y: 0,
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.04,
+      staggerDirection: 1,
     },
-  };
-  
-  const lastName = {
-    initial: {
-      y: 0,
-    },
-    animate: {
-      y: 0,
-      transition: {
-        delayChildren: 0.6,
-        staggerChildren: 0.04,
-        staggerDirection: 1,
-      },
-    },
-  };
-  
-  const letter = {
-    initial: {
-      y: 400,
-    },
-    animate: {
-      y: 0,
-      transition: { duration: 2, ...transition },
-    },
-  };
+  },
+};
+
+const letter = {
+  initial: {
+    y: 400,
+  },
+  animate: {
+    y: 0,
+    transition: { duration: 1, ...transition },
+  },
+};
 
 const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
   const imageDetails = {
@@ -92,24 +92,26 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
               </div>
               <div className="uppercase">MUA: @mylifeascrystall</div>
             </motion.div>
-            <motion.div className="overflow-hidden">
-              <motion.span className="mr-16" variants={firstName}>
-                <motion.span variants={letter}>Y</motion.span>
-                <motion.span variants={letter}>a</motion.span>
-                <motion.span variants={letter}>s</motion.span>
-                <motion.span variants={letter}>m</motion.span>
-                <motion.span variants={letter}>e</motion.span>
-                <motion.span variants={letter}>e</motion.span>
-                <motion.span variants={letter}>n</motion.span>
-              </motion.span>
-              <motion.span className="last" variants={lastName}>
-                <motion.span variants={letter}>T</motion.span>
-                <motion.span variants={letter}>a</motion.span>
-                <motion.span variants={letter}>r</motion.span>
-                <motion.span variants={letter}>i</motion.span>
-                <motion.span variants={letter}>q</motion.span>
-              </motion.span>
-            </motion.div>
+
+
+                  <motion.h1 className="mr-16" variants={firstName}>
+                    <motion.span variants={letter}>Y</motion.span>
+                    <motion.span variants={letter}>a</motion.span>
+                    <motion.span variants={letter}>s</motion.span>
+                    <motion.span variants={letter}>m</motion.span>
+                    <motion.span variants={letter}>e</motion.span>
+                    <motion.span variants={letter}>e</motion.span>
+                    <motion.span variants={letter}>n</motion.span>
+                  </motion.h1>
+
+                  <motion.h1 className="" variants={lastName}>
+                    <motion.span variants={letter}>T</motion.span>
+                    <motion.span variants={letter}>a</motion.span>
+                    <motion.span variants={letter}>r</motion.span>
+                    <motion.span variants={letter}>i</motion.span>
+                    <motion.span variants={letter}>q</motion.span>
+                  </motion.h1>
+ 
           </div>
         </div>
         <div className="justify-between items-start relative">
@@ -135,7 +137,7 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
                   transition={transition}
                 >
                   <motion.img
-                    src={("/dalle_clone.png")}
+                    src={"/dalle_clone.png"}
                     alt="an image"
                     style={{ scale: scale }}
                     initial={{ scale: 1.0 }}
@@ -164,11 +166,11 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
               the more obscure Latin words, consectetur, from a Lorem Ipsum
               passage, and going through the cites of the word in classical
               literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et
-              Malorum The Extremes of Good and Evil by Cicero, written in 45
-              BC. This book is a treatise on the theory of ethics, very popular
-              during the Renaissance. The first line of Lorem Ipsum, Lorem
-              ipsum dolor sit amet.., comes from a line in section 1.10.32.
+              from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum
+              The Extremes of Good and Evil by Cicero, written in 45 BC. This
+              book is a treatise on the theory of ethics, very popular during
+              the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor
+              sit amet.., comes from a line in section 1.10.32.
             </p>
           </div>
         </div>
