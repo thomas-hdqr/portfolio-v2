@@ -72,8 +72,8 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
       exit="exit"
     >
       <div className="container fluid">
-        <div className="w-full items-end">
-          <div className="pb-10">
+        <div className="row center top-row">
+          <div className="top">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{
@@ -81,16 +81,16 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
                 y: 0,
                 transition: { delay: 1.2, ...transition },
               }}
-              className="flex items-center justify-between"
+              className="details"
             >
               <div className="location">
                 <span>28.538336</span>
                 <span>-81.379234</span>
               </div>
-              <div className="uppercase">MUA: @mylifeascrystall</div>
+              <div className="mua">MUA: @mylifeascrystall</div>
             </motion.div>
-            <motion.div className="overflow-hidden" variants={firstName}>
-              <motion.span className="mr-16">
+            <motion.div className="model">
+              <motion.span className="first" variants={firstName}>
                 <motion.span variants={letter}>Y</motion.span>
                 <motion.span variants={letter}>a</motion.span>
                 <motion.span variants={letter}>s</motion.span>
@@ -99,9 +99,7 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
                 <motion.span variants={letter}>e</motion.span>
                 <motion.span variants={letter}>n</motion.span>
               </motion.span>
-            </motion.div>
-            <motion.div className="overflow-hidden" variants={lastName}>
-              <motion.span className="">
+              <motion.span className="last" variants={lastName}>
                 <motion.span variants={letter}>T</motion.span>
                 <motion.span variants={letter}>a</motion.span>
                 <motion.span variants={letter}>r</motion.span>
@@ -111,9 +109,9 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
             </motion.div>
           </div>
         </div>
-        <div className="row relative">
-          <div className="">
-            <motion.div className="relative">
+        <div className="row bottom-row">
+          <div className="bottom">
+            <motion.div className="image-container-single">
               <motion.div
                 initial={{
                   y: "-50%",
@@ -123,24 +121,24 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
                 animate={{
                   y: 0,
                   width: "100%",
-                  height: windowWidth > 1440 ? 800 : 400,
+                  height: window.innerWidth > 1440 ? 800 : 400,
                   transition: { delay: 0.2, ...transition },
                 }}
-                className="w-full overflow-hidden absolute left-0 right-0"
+                className="thumbnail-single"
               >
                 <motion.div
-                  className="absolute w-full"
+                  className="frame-single"
                   whileHover="hover"
                   transition={transition}
                 >
                   <motion.img
-                    src="/airbnb.png"
+                    src={("/public/airbnb.png")}
                     alt="an image"
-                    style={{ scale: scale, maxWidth: "100%", height: "auto" }}
+                    style={{ scale: scale }}
                     initial={{ scale: 1.0 }}
                     animate={{
                       transition: { delay: 0.2, ...transition },
-                      y: windowWidth > 1440 ? -1200 : -600,
+                      y: window.innerWidth > 1440 ? -1200 : -600,
                     }}
                   />
                 </motion.div>
@@ -149,10 +147,10 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
           </div>
         </div>
       </div>
-      <div className="mt-48">
-        <div className="flex-grow relative w-auto h-full">
-          <div className="flex items-center">
-            <h2 className="">
+      <div className="detailed-information">
+        <div className="container">
+          <div className="row">
+            <h2 className="title">
               The insiration behind the artwork & <br /> what it means.
             </h2>
             <p>
