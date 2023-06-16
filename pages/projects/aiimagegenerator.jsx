@@ -11,7 +11,7 @@ const firstName = {
     y: 0,
     transition: {
       delayChildren: 0.6,
-      staggerChildren: 0.04,
+      staggerChildren: 0.2,
       staggerDirection: -1,
     },
   },
@@ -37,7 +37,7 @@ const letter = {
   },
   animate: {
     y: 50,
-    transition: { duration: 1, ...transition },
+    transition: { duration: 2, ...transition },
   },
 };
 
@@ -52,6 +52,7 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
 
   const [canScroll, setCanScroll] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
+  const [imageHeight, setImageHeight] = useState(400); // default value
 
   useEffect(() => {
     if (canScroll === false) {
@@ -60,20 +61,22 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
       document.querySelector("body").classList.remove("overflow-y-hidden");
     }
 
-    setWindowWidth(window.innerWidth);
+    const width = window.innerWidth;
+    setWindowWidth(width);
+    setImageHeight(width > 1440 ? 800 : 400); // set image height based on window width
   }, [canScroll]);
 
   return (
     <motion.div
       onAnimationComplete={() => setCanScroll(true)}
-      className="single"
+      className=""
       initial="initial"
       animate="animate"
       exit="exit"
     >
-      <div className="container fluid">
-        <div className="row center top-row">
-          <div className="top">
+      <div className="flex-grow relative w-auto h-full">
+        <div className="flex items-center justify-center w-full">
+          <div className="pb-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{
@@ -81,16 +84,16 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
                 y: 0,
                 transition: { delay: 1.2, ...transition },
               }}
-              className="details"
+              className="flex items-center justify-between"
             >
-              <div className="location">
+              <div className="ml-4">
                 <span>28.538336</span>
                 <span>-81.379234</span>
               </div>
-              <div className="mua">MUA: @mylifeascrystall</div>
+              <div className="uppercase">MUA: @mylifeascrystall</div>
             </motion.div>
-            <motion.div className="model">
-              <motion.span className="first" variants={firstName}>
+            <motion.div className="overflow-hidden">
+              <motion.span className="mr-16" variants={firstName}>
                 <motion.span variants={letter}>Y</motion.span>
                 <motion.span variants={letter}>a</motion.span>
                 <motion.span variants={letter}>s</motion.span>
@@ -109,9 +112,9 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
             </motion.div>
           </div>
         </div>
-        <div className="row bottom-row">
-          <div className="bottom">
-            <motion.div className="image-container-single">
+        <div className="justify-between items-start relative">
+          <div className="h-full w-full">
+            <motion.div className="relative">
               <motion.div
                 initial={{
                   y: "-50%",
@@ -121,24 +124,24 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
                 animate={{
                   y: 0,
                   width: "100%",
-                  height: window.innerWidth > 1440 ? 800 : 400,
+                  height: imageHeight,
                   transition: { delay: 0.2, ...transition },
                 }}
-                className="thumbnail-single"
+                className="overflow-hidden relative"
               >
                 <motion.div
-                  className="frame-single"
+                  className="absolute w-full"
                   whileHover="hover"
                   transition={transition}
                 >
                   <motion.img
-                    src={("/public/airbnb.png")}
+                    src={("/dalle_clone.png")}
                     alt="an image"
                     style={{ scale: scale }}
                     initial={{ scale: 1.0 }}
                     animate={{
                       transition: { delay: 0.2, ...transition },
-                      y: window.innerWidth > 1440 ? -1200 : -600,
+                      y: windowWidth > 1440 ? -1200 : -600,
                     }}
                   />
                 </motion.div>
@@ -147,10 +150,10 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
           </div>
         </div>
       </div>
-      <div className="detailed-information">
-        <div className="container">
-          <div className="row">
-            <h2 className="title">
+      <div className="mt-48">
+        <div className="justify-between items-start">
+          <div className="">
+            <h2 className="text-3xl">
               The insiration behind the artwork & <br /> what it means.
             </h2>
             <p>
@@ -161,11 +164,11 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
               the more obscure Latin words, consectetur, from a Lorem Ipsum
               passage, and going through the cites of the word in classical
               literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
+              from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et
+              Malorum The Extremes of Good and Evil by Cicero, written in 45
               BC. This book is a treatise on the theory of ethics, very popular
-              during the Renaissance. The first line of Lorem Ipsum, "Lorem
-              ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              during the Renaissance. The first line of Lorem Ipsum, Lorem
+              ipsum dolor sit amet.., comes from a line in section 1.10.32.
             </p>
           </div>
         </div>
