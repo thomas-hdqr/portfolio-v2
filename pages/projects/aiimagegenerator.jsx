@@ -33,10 +33,10 @@ const lastName = {
 
 const letter = {
   initial: {
-    y: 400,
+    opacity: 0,
   },
   animate: {
-    y: 0,
+    opacity: 1,
     transition: { duration: 1, ...transition },
   },
 };
@@ -69,7 +69,7 @@ const AiImageGenerator = () => {
   return (
     <motion.div
       onAnimationComplete={() => setCanScroll(true)}
-      className="p-60"
+      className="px-60 py-24"
       initial="initial"
       animate="animate"
       exit="exit"
@@ -77,7 +77,7 @@ const AiImageGenerator = () => {
       <div className="flex-grow relative w-auto h-full">
         {/* Texts animation */}
         <div className="flex items-center justify-center w-full">
-          <div className="pb-10">
+          <div className="">
             {/* 1st text animation (small) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -86,44 +86,40 @@ const AiImageGenerator = () => {
                 y: 0,
                 transition: { delay: 1.2, ...transition },
               }}
-              className="flex items-center justify-between"
+              className="flex items-center justify-between uppercase"
             >
               <div className="ml-4">
-                <span>28.538336</span>
-                <span>-81.379234</span>
+                Web Development
               </div>
-              <div className="uppercase">MUA: @mylifeascrystall</div>
+              <div className="uppercase">react, tailwindcss, firebase</div>
             </motion.div>
 
             {/* 2nd text animation (big) */}
-            <motion.div
-              variants={firstName}
-              initial="initial"
-              animate="animate"
-            >
-              <motion.span className="mr-16" variants={firstName}>
-                <motion.span variants={letter}>Y</motion.span>
-                <motion.span variants={letter}>a</motion.span>
-                <motion.span variants={letter}>s</motion.span>
-                <motion.span variants={letter}>m</motion.span>
-                <motion.span variants={letter}>e</motion.span>
-                <motion.span variants={letter}>e</motion.span>
-                <motion.span variants={letter}>n</motion.span>
-              </motion.span>
+            <div className="text-9xl">
+            {/* // First Name */}
+            <motion.span className="mr-16" variants={firstName}>
+              {"Yasmeen".split("").map((char, index) => (
+                <motion.span key={index} variants={letter}>
+                  {char}
+                </motion.span>
+              ))}
+            </motion.span>
 
-              <motion.span className="" variants={lastName}>
-                <motion.span variants={letter}>T</motion.span>
-                <motion.span variants={letter}>a</motion.span>
-                <motion.span variants={letter}>r</motion.span>
-                <motion.span variants={letter}>i</motion.span>
-                <motion.span variants={letter}>q</motion.span>
-              </motion.span>
-            </motion.div>
+            {/* // Last Name */}
+            <motion.span className="" variants={lastName}>
+              {"Tariq".split("").map((char, index) => (
+                <motion.span key={index} variants={letter}>
+                  {char}
+                </motion.span>
+              ))}
+            </motion.span>
+
+            </div>
           </div>
         </div>
 
         {/* Image animation */}
-        <div className="justify-between items-start relative">
+        <div className="justify-between items-start relative py-20">
           <div className="h-full w-full">
             <motion.div className="relative">
               <motion.div
@@ -162,9 +158,9 @@ const AiImageGenerator = () => {
         </div>
       </div>
 
-      <div className="mt-48">
+      <div className="">
         <div className="justify-between items-start">
-          <div className="">
+          <div className="space-y-4">
             <h2 className="text-3xl">
               The insiration behind the artwork & <br /> what it means.
             </h2>
