@@ -41,7 +41,7 @@ const letter = {
   },
 };
 
-const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
+const AiImageGenerator = () => {
   const imageDetails = {
     width: "100%",
     height: "100%",
@@ -96,7 +96,11 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
             </motion.div>
 
             {/* 2nd text animation (big) */}
-            <motion.div className="ml-16">
+            <motion.div
+              variants={firstName}
+              initial="initial"
+              animate="animate"
+            >
               <motion.span className="mr-16" variants={firstName}>
                 <motion.span variants={letter}>Y</motion.span>
                 <motion.span variants={letter}>a</motion.span>
@@ -114,7 +118,7 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
                 <motion.span variants={letter}>i</motion.span>
                 <motion.span variants={letter}>q</motion.span>
               </motion.span>
-            </motion.div>  
+            </motion.div>
           </div>
         </div>
 
