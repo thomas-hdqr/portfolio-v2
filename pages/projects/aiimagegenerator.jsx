@@ -75,8 +75,10 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
       exit="exit"
     >
       <div className="flex-grow relative w-auto h-full">
+        {/* Texts animation */}
         <div className="flex items-center justify-center w-full">
           <div className="pb-10">
+            {/* 1st text animation (small) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{
@@ -93,25 +95,30 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
               <div className="uppercase">MUA: @mylifeascrystall</div>
             </motion.div>
 
-            <motion.h1 className="mr-16" variants={firstName}>
-              <motion.span variants={letter}>Y</motion.span>
-              <motion.span variants={letter}>a</motion.span>
-              <motion.span variants={letter}>s</motion.span>
-              <motion.span variants={letter}>m</motion.span>
-              <motion.span variants={letter}>e</motion.span>
-              <motion.span variants={letter}>e</motion.span>
-              <motion.span variants={letter}>n</motion.span>
-            </motion.h1>
+            {/* 2nd text animation (big) */}
+            <motion.div className="ml-16">
+              <motion.span className="mr-16" variants={firstName}>
+                <motion.span variants={letter}>Y</motion.span>
+                <motion.span variants={letter}>a</motion.span>
+                <motion.span variants={letter}>s</motion.span>
+                <motion.span variants={letter}>m</motion.span>
+                <motion.span variants={letter}>e</motion.span>
+                <motion.span variants={letter}>e</motion.span>
+                <motion.span variants={letter}>n</motion.span>
+              </motion.span>
 
-            <motion.h1 className="" variants={lastName}>
-              <motion.span variants={letter}>T</motion.span>
-              <motion.span variants={letter}>a</motion.span>
-              <motion.span variants={letter}>r</motion.span>
-              <motion.span variants={letter}>i</motion.span>
-              <motion.span variants={letter}>q</motion.span>
-            </motion.h1>
+              <motion.span className="" variants={lastName}>
+                <motion.span variants={letter}>T</motion.span>
+                <motion.span variants={letter}>a</motion.span>
+                <motion.span variants={letter}>r</motion.span>
+                <motion.span variants={letter}>i</motion.span>
+                <motion.span variants={letter}>q</motion.span>
+              </motion.span>
+            </motion.div>  
           </div>
         </div>
+
+        {/* Image animation */}
         <div className="justify-between items-start relative">
           <div className="h-full w-full">
             <motion.div className="relative">
@@ -150,6 +157,7 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
           </div>
         </div>
       </div>
+
       <div className="mt-48">
         <div className="justify-between items-start">
           <div className="">
