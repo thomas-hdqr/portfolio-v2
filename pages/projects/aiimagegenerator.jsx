@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -74,9 +75,9 @@ const AiImageGenerator = () => {
       animate="animate"
       exit="exit"
     >
-      <div className="flex-grow relative w-auto h-full">
+      <div className="flex-grow relative">
         {/* Texts animation */}
-        <div className="flex items-center justify-center w-full">
+        <div className="flex items-center justify-center">
           <div className="">
             {/* 1st text animation (small) */}
             <motion.div
@@ -86,41 +87,55 @@ const AiImageGenerator = () => {
                 y: 0,
                 transition: { delay: 1.2, ...transition },
               }}
-              className="flex items-center justify-between uppercase text-sm"
+              className=" uppercase text-sm"
             >
-              <div className="sm:ml-4">
-                Web Development
+              <Link href="/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5 cursor-pointer mb-8"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </Link>
+
+              <div className="flex items-center justify-between">
+                <div className="sm:ml-4">Web Development</div>
+                <div className="">react, tailwindcss, firebase</div>
               </div>
-              <div className="">react, tailwindcss, firebase</div>
             </motion.div>
 
             {/* 2nd text animation (big) */}
             <div className="sm:text-9xl text-5xl pt-6">
-            {/* // First Name */}
-            <motion.span className="sm:mr-16 mr-4" variants={firstName}>
-              {"Yasmeen".split("").map((char, index) => (
-                <motion.span key={index} variants={letter}>
-                  {char}
-                </motion.span>
-              ))}
-            </motion.span>
+              {/* // First Name */}
+              <motion.span className="sm:mr-16 mr-4" variants={firstName}>
+                {"Yasmeen".split("").map((char, index) => (
+                  <motion.span key={index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.span>
 
-            {/* // Last Name */}
-            <motion.span className="" variants={lastName}>
-              {"Tariq".split("").map((char, index) => (
-                <motion.span key={index} variants={letter}>
-                  {char}
-                </motion.span>
-              ))}
-            </motion.span>
-
+              {/* // Last Name */}
+              <motion.span className="" variants={lastName}>
+                {"Tariq".split("").map((char, index) => (
+                  <motion.span key={index} variants={letter}>
+                    {char}
+                  </motion.span>
+                ))}
+              </motion.span>
             </div>
           </div>
         </div>
 
         {/* Image animation */}
-        <div className="justify-between items-start relative py-20">
-          <div className="h-full w-full">
+        <div className="justify-between items-start relative py-10 sm:py-28">
+          <div className="">
             <motion.div className="relative">
               <motion.div
                 initial={{
@@ -148,7 +163,12 @@ const AiImageGenerator = () => {
                     initial={{ scale: 1.0 }}
                     animate={{
                       transition: { delay: 0.2, ...transition },
-                      y: windowWidth > 1440 ? -1200 : -600,
+                      y:
+                        windowWidth > 1440
+                          ? -1200
+                          : windowWidth <= 768
+                          ? -50
+                          : -600,
                     }}
                   />
                 </motion.div>
