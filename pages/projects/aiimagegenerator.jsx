@@ -69,7 +69,7 @@ const AiImageGenerator = () => {
   return (
     <motion.div
       onAnimationComplete={() => setCanScroll(true)}
-      className="px-60 py-24"
+      className="sm:px-60 sm:py-24 px-14 py-10"
       initial="initial"
       animate="animate"
       exit="exit"
@@ -86,18 +86,18 @@ const AiImageGenerator = () => {
                 y: 0,
                 transition: { delay: 1.2, ...transition },
               }}
-              className="flex items-center justify-between uppercase"
+              className="flex items-center justify-between uppercase text-sm"
             >
-              <div className="ml-4">
+              <div className="sm:ml-4">
                 Web Development
               </div>
-              <div className="uppercase">react, tailwindcss, firebase</div>
+              <div className="">react, tailwindcss, firebase</div>
             </motion.div>
 
             {/* 2nd text animation (big) */}
-            <div className="text-9xl">
+            <div className="sm:text-9xl text-5xl pt-6">
             {/* // First Name */}
-            <motion.span className="mr-16" variants={firstName}>
+            <motion.span className="sm:mr-16 mr-4" variants={firstName}>
               {"Yasmeen".split("").map((char, index) => (
                 <motion.span key={index} variants={letter}>
                   {char}
@@ -161,7 +161,7 @@ const AiImageGenerator = () => {
       <div className="">
         <div className="justify-between items-start">
           <div className="space-y-4">
-            <h2 className="text-3xl">
+            <h2 className="sm:text-3xl text-2xl">
               The insiration behind the artwork & <br /> what it means.
             </h2>
             <p>
