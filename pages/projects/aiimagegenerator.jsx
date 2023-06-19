@@ -69,7 +69,7 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
   return (
     <motion.div
       onAnimationComplete={() => setCanScroll(true)}
-      className=""
+      className="p-60"
       initial="initial"
       animate="animate"
       exit="exit"
@@ -93,25 +93,23 @@ const AiImageGenerator = ({ imageDetails: propImageDetails }) => {
               <div className="uppercase">MUA: @mylifeascrystall</div>
             </motion.div>
 
+            <motion.h1 className="mr-16" variants={firstName}>
+              <motion.span variants={letter}>Y</motion.span>
+              <motion.span variants={letter}>a</motion.span>
+              <motion.span variants={letter}>s</motion.span>
+              <motion.span variants={letter}>m</motion.span>
+              <motion.span variants={letter}>e</motion.span>
+              <motion.span variants={letter}>e</motion.span>
+              <motion.span variants={letter}>n</motion.span>
+            </motion.h1>
 
-                  <motion.h1 className="mr-16" variants={firstName}>
-                    <motion.span variants={letter}>Y</motion.span>
-                    <motion.span variants={letter}>a</motion.span>
-                    <motion.span variants={letter}>s</motion.span>
-                    <motion.span variants={letter}>m</motion.span>
-                    <motion.span variants={letter}>e</motion.span>
-                    <motion.span variants={letter}>e</motion.span>
-                    <motion.span variants={letter}>n</motion.span>
-                  </motion.h1>
-
-                  <motion.h1 className="" variants={lastName}>
-                    <motion.span variants={letter}>T</motion.span>
-                    <motion.span variants={letter}>a</motion.span>
-                    <motion.span variants={letter}>r</motion.span>
-                    <motion.span variants={letter}>i</motion.span>
-                    <motion.span variants={letter}>q</motion.span>
-                  </motion.h1>
- 
+            <motion.h1 className="" variants={lastName}>
+              <motion.span variants={letter}>T</motion.span>
+              <motion.span variants={letter}>a</motion.span>
+              <motion.span variants={letter}>r</motion.span>
+              <motion.span variants={letter}>i</motion.span>
+              <motion.span variants={letter}>q</motion.span>
+            </motion.h1>
           </div>
         </div>
         <div className="justify-between items-start relative">
