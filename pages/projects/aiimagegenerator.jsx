@@ -198,6 +198,9 @@ const AiImageGenerator = () => {
               the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor
               sit amet.., comes from a line in section 1.10.32.
             </p>
+            <Link href="http://">
+             <p className="text-lg font-semibold underline cursor-pointer">Visit project</p>
+            </Link>
           </div>
         </div>
       </div>
