@@ -42,7 +42,7 @@ const letter = {
   },
 };
 
-const AiImageGenerator = () => {
+const projectModel = () => {
   const imageDetails = {
     width: "100%",
     height: "100%",
@@ -208,4 +208,4 @@ const AiImageGenerator = () => {
   );
 };
 
-export default AiImageGenerator;
+export default projectModel;
