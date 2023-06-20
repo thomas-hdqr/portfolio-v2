@@ -14,14 +14,14 @@ const ProjectPage = ({ project }) => {
 
 export async function getStaticPaths() {
   const paths = projects.map(project => ({
-    params: { slug: project.title.toLowerCase().split(' ').join('-') },  // Use project's title as slug
+    params: { slug: project.slug },
   }));
 
   return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
-  const project = projects.find(project => project.title.toLowerCase().split(' ').join('-') === params.slug);
+  const project = projects.find(project => project.slug === params.slug);
 
   if (!project) {
     return {
@@ -34,5 +34,6 @@ export async function getStaticProps({ params }) {
     revalidate: 1, // In seconds
   };
 }
+
 
 export default ProjectPage;
