@@ -7,7 +7,7 @@ export default [
     {
         id: 7,
         slug: 'ai-image-generator',
-        image: "/dalle_clone.png",
+        image: "/dalle_clone.webp",
         title: "AI Image Generator",
         description: "Another version of Dall-E",
         longerdescription: "kjhlkjbkljjhjkh",
@@ -17,8 +17,8 @@ export default [
     {
         id: 6,
         slug: 'netflix-clone',
-        image: "/netflix-clone.png",
-        title: "Netflix",
+        image: "/netflix-clone.webp",
+        title: "Netflix Clone",
         description: "Creating the UI of Netflix",
         longerdescription: "",
         tech: "React, Next.js, Tailwindcss, Firebase, Recoil",
@@ -26,8 +26,8 @@ export default [
     },
     {
         id: 4,
-        slug: 'airbnb-clone',
-        image: "/airbnb.png",
+        slug: 'a-new-airbnb',
+        image: "/airbnb.webp",
         title: "A new Airbnb",
         description: "Building another version of Airbnb",
         longerdescription: "dfvqdsfqefqbev",
@@ -37,7 +37,7 @@ export default [
     {
         id: 2,
         slug: 'realtor',
-        image: "/Realtor.png",
+        image: "/Realtor.webp",
         title: "Realtor",
         description: "A real estate app",
         longerdescription: "",
@@ -57,7 +57,7 @@ export default [
     {
         id: 5,
         slug: 'osteopath',
-        image: "/osteopath.png",
+        image: "/osteopath.webp",
         title: "Osteopath",
         description: "An osteopath based in Roanne, France",
         longerdescription: "",
@@ -67,7 +67,7 @@ export default [
     {
         id: 3,
         slug: 'tiktok-clone',
-        image: "/tiktokclone.png",
+        image: "/tiktokclone.webp",
         title: "TikTok Clone",
         description: "Rebuild the popular app TikTok",
         longerdescription: "",
