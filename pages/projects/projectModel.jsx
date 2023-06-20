@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import Projectsdata from "../../components/Projectsdata";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -18,20 +19,6 @@ const firstName = {
   },
 };
 
-const lastName = {
-  initial: {
-    y: 0,
-  },
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: 1,
-    },
-  },
-};
-
 const letter = {
   initial: {
     opacity: 0,
@@ -42,7 +29,7 @@ const letter = {
   },
 };
 
-const projectModel = () => {
+const ProjectModel = ({ project }) => {
   const imageDetails = {
     width: "100%",
     height: "100%",
@@ -106,7 +93,7 @@ const projectModel = () => {
 
               <div className="flex items-center justify-between">
                 <div className="sm:ml-4">Web Development</div>
-                <div className="">react, tailwindcss, firebase</div>
+                <div className="">{project.tech}</div>
               </div>
             </motion.div>
 
@@ -114,20 +101,13 @@ const projectModel = () => {
             <div className="sm:text-9xl text-5xl pt-6">
               {/* // First Name */}
               <motion.span className="sm:mr-16 mr-4" variants={firstName}>
-                {"Yasmeen".split("").map((char, index) => (
-                  <motion.span key={index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
-              </motion.span>
-
-              {/* // Last Name */}
-              <motion.span className="" variants={lastName}>
-                {"Tariq".split("").map((char, index) => (
-                  <motion.span key={index} variants={letter}>
-                    {char}
-                  </motion.span>
-                ))}
+                {project &&
+                  project.title &&
+                  project.title.split("").map((char, index) => (
+                    <motion.span key={index} variants={letter}>
+                      {char}
+                    </motion.span>
+                  ))}
               </motion.span>
             </div>
           </div>
@@ -157,8 +137,8 @@ const projectModel = () => {
                   transition={transition}
                 >
                   <motion.img
-                    src={"/dalle_clone.png"}
-                    alt="an image"
+                    src={project.image}
+                    alt={project.title}
                     style={{ scale: scale }}
                     initial={{ scale: 1.0 }}
                     animate={{
@@ -181,25 +161,12 @@ const projectModel = () => {
       <div className="">
         <div className="justify-between items-start">
           <div className="space-y-4">
-            <h2 className="sm:text-3xl text-2xl">
-              The insiration behind the artwork & <br /> what it means.
-            </h2>
-            <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in classical
-              literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum
-              The Extremes of Good and Evil by Cicero, written in 45 BC. This
-              book is a treatise on the theory of ethics, very popular during
-              the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor
-              sit amet.., comes from a line in section 1.10.32.
-            </p>
-            <Link href="http://">
-             <p className="text-lg font-semibold underline cursor-pointer">Visit project</p>
+            <h2 className="sm:text-3xl text-2xl">{project.description}</h2>
+            <p>{project.longerdescription}</p>
+            <Link href={project.link}>
+              <p className="text-lg font-semibold underline cursor-pointer">
+                Visit project
+              </p>
             </Link>
           </div>
         </div>
@@ -208,4 +175,4 @@ const projectModel = () => {
   );
 };
 
-export default projectModel;
+export default ProjectModel;
