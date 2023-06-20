@@ -70,7 +70,7 @@ const AiImageGenerator = () => {
   return (
     <motion.div
       onAnimationComplete={() => setCanScroll(true)}
-      className="sm:px-60 sm:py-24 px-14 py-10"
+      className="sm:px-60 px-14 sm:py-24 py-10"
       initial="initial"
       animate="animate"
       exit="exit"
