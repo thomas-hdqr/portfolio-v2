@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import Projectsdata from "../../components/Projectsdata";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -57,14 +56,14 @@ const ProjectModel = ({ project }) => {
   return (
     <motion.div
       onAnimationComplete={() => setCanScroll(true)}
-      className="sm:px-60 px-14 sm:py-24 py-10"
+      className="sm:px-60 px-9 sm:py-24 py-10"
       initial="initial"
       animate="animate"
       exit="exit"
     >
       <div className="flex-grow relative">
         {/* Texts animation */}
-        <div className="flex items-center justify-center">
+        <div className="items-center justify-center">
           <div className="">
             {/* 1st text animation (small) */}
             <motion.div
@@ -76,29 +75,27 @@ const ProjectModel = ({ project }) => {
               }}
               className=" uppercase text-sm"
             >
-              <Link href="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5 cursor-pointer mb-8"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </Link>
-
-              <div className="flex items-center justify-between">
-                <div className="sm:ml-4">Web Development</div>
+              <div className="sm:flex items-center justify-between">
+                <Link href="/">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-5 h-5 cursor-pointer align-middle"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </Link>
                 <div className="">{project.tech}</div>
               </div>
             </motion.div>
 
             {/* 2nd text animation (big) */}
-            <div className="sm:text-9xl text-5xl pt-6">
+            <div className="sm:text-9xl text-5xl pt-6 text-center">
               {/* // First Name */}
               <motion.span className="sm:mr-16 mr-4" variants={firstName}>
                 {project &&
@@ -137,6 +134,7 @@ const ProjectModel = ({ project }) => {
                   transition={transition}
                 >
                   <motion.img
+                    layoutId={`project-image-${project.id}`} // Add this
                     src={project.image}
                     alt={project.title}
                     style={{ scale: scale }}

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 import React, { useState } from 'react'
 
 
@@ -33,7 +34,9 @@ function Projectcard(props) {
         <p className="px-10 text-base">{props.project.tech}</p>
       </div>
       <div className="cursor-pointer border-2 border-black rounded-2xl m-10 hover:bg-black">
-          <a href={props.project.link} target="_blank" rel="noopener noreferrer"><p className="text-center p-2 hover:text-white">See project</p></a> 
+      <Link href={`/projects/${props.project.slug}`}>
+          <a className="text-center p-2 hover:text-white">See project</a> 
+        </Link>
       </div>
     </div>
   )

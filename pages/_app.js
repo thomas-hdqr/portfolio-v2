@@ -1,9 +1,9 @@
 import '../styles/globals.css'
-import {ThemeProvider} from 'next-themes'
 import Script from 'next/script'
 
 
-function MyApp({ Component, pageProps }) {
+
+function MyApp({ Component, pageProps, router }) {
 
 
   return (
@@ -18,9 +18,8 @@ function MyApp({ Component, pageProps }) {
             gtag('config', 'G-H4MB4WY3C5');
           `}
         </Script>
-    <ThemeProvider enableSystem={true} attribute="class">
-        <Component {...pageProps} />
-      </ThemeProvider>
+        <Component {...pageProps} key={router.route} />
+
     </>
   )
 }
