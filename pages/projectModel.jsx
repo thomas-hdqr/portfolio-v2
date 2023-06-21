@@ -95,7 +95,7 @@ const ProjectModel = ({ project }) => {
             </motion.div>
 
             {/* 2nd text animation (big) */}
-            <div className="sm:text-9xl text-5xl pt-6 text-center">
+            <div className="sm:text-8xl text-5xl pt-6 text-center">
               {/* // First Name */}
               <motion.span className="sm:mr-16 mr-4" variants={firstName}>
                 {project &&
