@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -54,7 +54,6 @@ const ProjectModel = ({ project }) => {
     setWindowWidth(width);
     setImageHeight(width > 1440 ? 800 : 400); // set image height based on window width
   }, [canScroll]);
-
 
   return (
     <motion.div
@@ -136,22 +135,24 @@ const ProjectModel = ({ project }) => {
                   whileHover="hover"
                   transition={transition}
                 >
-                  <motion.img
-                    layoutId={`project-image-${project?.id}`} // Add this
-                    src={project?.image}
-                    alt={project.title}
-                    style={{ scale: scale }}
-                    initial={{ scale: 1.0 }}
-                    animate={{
-                      transition: { delay: 0.2, ...transition },
-                      y:
-                        windowWidth > 1440
-                          ? -1200
-                          : windowWidth <= 768
-                          ? -50
-                          : -600,
-                    }}
-                  />
+                  {project && (
+                    <motion.img
+                      layoutId={`project-image-${project.id}`} // Add this
+                      src={project.image}
+                      alt={project.title}
+                      style={{ scale: scale }}
+                      initial={{ scale: 1.0 }}
+                      animate={{
+                        transition: { delay: 0.2, ...transition },
+                        y:
+                          windowWidth > 1440
+                            ? -1200
+                            : windowWidth <= 768
+                            ? -50
+                            : -600,
+                      }}
+                    />
+                  )}
                 </motion.div>
               </motion.div>
             </motion.div>
