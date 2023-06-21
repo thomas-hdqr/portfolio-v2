@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -52,13 +52,6 @@ const ProjectModel = ({ project }) => {
     setWindowWidth(width);
     setImageHeight(width > 1440 ? 800 : 400); // set image height based on window width
   }, [canScroll]);
-
-
-  const [isMounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <motion.div
@@ -121,8 +114,6 @@ const ProjectModel = ({ project }) => {
         <div className="justify-between items-start relative py-10 sm:py-28">
           <div className="">
             <motion.div className="relative">
-            <AnimatePresence>
-              {isMounted && (
               <motion.div
                 initial={{
                   y: "-50%",
@@ -160,8 +151,6 @@ const ProjectModel = ({ project }) => {
                   />
                 </motion.div>
               </motion.div>
-               )}
-               </AnimatePresence>
             </motion.div>
           </div>
         </div>
