@@ -32,7 +32,7 @@ function Projectcard(props) {
         <p className="pt-10 px-10">{props.project.description}</p>
         <p className="px-10 text-base">{props.project.tech}</p>
       </div>
-      <div className="cursor-pointer border-2 border-black rounded-2xl m-10 hover:bg-black">
+      <div className="text-center p-2 cursor-pointer border-2 border-black rounded-2xl m-10 hover:bg-black">
       <Link href={`/projects/${props.project.slug}`}>
           <span className="text-center p-2 hover:text-white">See project</span> 
         </Link>
