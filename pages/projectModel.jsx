@@ -100,7 +100,7 @@ const ProjectModel = ({ project }) => {
               <motion.span className="sm:mr-16 mr-4" variants={firstName}>
                
                     <motion.span key={index} variants={letter}>
-                      {char}
+                    
                     </motion.span>
                   
               </motion.span>
