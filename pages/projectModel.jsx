@@ -137,9 +137,9 @@ const ProjectModel = ({ project }) => {
                 >
                   {project && (
                     <motion.img
-                      layoutId={`project-image-${project.id}`} // Add this
-                      src={project.image}
-                      alt={project.title}
+                      layoutId={`project-image-${project?.id}`} // Add this
+                      src={project?.image}
+                      alt={project?.title}
                       style={{ scale: scale }}
                       initial={{ scale: 1.0 }}
                       animate={{
@@ -165,7 +165,7 @@ const ProjectModel = ({ project }) => {
           <div className="space-y-4">
             <h2 className="sm:text-3xl text-2xl">{project?.description}</h2>
             <p>{project?.longerdescription}</p>
-            {project.link ? (
+            {project?.link ? (
               <Link href={project?.link}>
                 <p className="text-lg font-semibold underline cursor-pointer">
                   Visit project
