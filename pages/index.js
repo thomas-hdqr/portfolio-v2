@@ -1,4 +1,5 @@
 // this is the main part of the site
+'use client'
 
 import Head from 'next/head'
 import Hero from '../components/Hero'
