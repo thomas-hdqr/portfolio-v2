@@ -17,11 +17,16 @@ export async function getStaticPaths() {
     params: { slug: project.slug },
   }));
 
+  console.log(paths); // Debug: log the paths
+
   return { paths, fallback: true };
 }
 
+
 export async function getStaticProps({ params }) {
   const project = projects.find(project => project.slug === params.slug);
+
+  console.log(project, params.slug); // Debug: log the project and slug
 
   if (!project) {
     return {
@@ -34,6 +39,7 @@ export async function getStaticProps({ params }) {
     revalidate: 1, // In seconds
   };
 }
+
 
 
 
