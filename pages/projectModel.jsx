@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
@@ -53,13 +55,6 @@ const ProjectModel = ({ project }) => {
     setImageHeight(width > 1440 ? 800 : 400); // set image height based on window width
   }, [canScroll]);
 
-
-  const tech = project?.tech || '';
-  const title = project?.title || '';
-  const image = project?.image || '';
-  const description = project?.description || '';
-  const longerdescription = project?.longerdescription || '';
-  const link = project?.link || '';
 
   return (
     <motion.div
