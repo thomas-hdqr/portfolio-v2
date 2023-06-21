@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
@@ -167,7 +165,7 @@ const ProjectModel = ({ project }) => {
             <p>{project?.longerdescription}</p>
             {project?.link ? (
               <Link href={project?.link}>
-                <p className="text-lg font-semibold underline cursor-pointer">
+                <p className="pt-4 text-lg font-semibold underline cursor-pointer">
                   Visit project
                 </p>
               </Link>

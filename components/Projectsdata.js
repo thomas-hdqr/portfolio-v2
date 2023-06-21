@@ -10,7 +10,7 @@ export default [
         image: "/dalle_clone.webp",
         title: "AI Image Generator",
         description: "Another version of Dall-E",
-        longerdescription: "kjhlkjbkljjhjkh",
+        longerdescription: "The idea here was to build something similar to Dall-E and use OpenAI API. For that project I've used as well Cloudinary to store images. I am more used of Firebase and Firestore to store files so that was another challenge. Also it was the first time for me to implement a download button. Unfortunately due to the expensive cost of OpenAI API, the app is basically useless since all the tokens have been spended already so it is only to see what was possible.",
         tech: "React, Tailwindcss, MongoDB, Node.js, Express.js and OpenAI API",
         link: "https://dalle-clone-mddp.vercel.app/",
     },

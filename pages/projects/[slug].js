@@ -1,5 +1,3 @@
-'use client'
-
 import { useRouter } from 'next/router';
 import projects from '../../components/Projectsdata';
 import ProjectModel from '../projectModel';
