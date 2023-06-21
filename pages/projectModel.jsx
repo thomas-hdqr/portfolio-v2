@@ -166,7 +166,7 @@ const ProjectModel = ({ project }) => {
             <h2 className="sm:text-3xl text-2xl">{project?.description}</h2>
             <p>{project?.longerdescription}</p>
             {project.link ? (
-              <Link href={project.link}>
+              <Link href={project?.link}>
                 <p className="text-lg font-semibold underline cursor-pointer">
                   Visit project
                 </p>
