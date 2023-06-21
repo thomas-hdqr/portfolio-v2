@@ -90,7 +90,7 @@ const ProjectModel = ({ project }) => {
                     />
                   </svg>
                 </Link>
-                <div className=""></div>
+                <div className="">{project.tech}</div>
               </div>
             </motion.div>
 
@@ -98,11 +98,13 @@ const ProjectModel = ({ project }) => {
             <div className="sm:text-9xl text-5xl pt-6 text-center">
               {/* // First Name */}
               <motion.span className="sm:mr-16 mr-4" variants={firstName}>
-               
-                    <motion.span>
-                    
+                {project &&
+                  project.title &&
+                  project.title.split("").map((char, index) => (
+                    <motion.span key={index} variants={letter}>
+                      {char}
                     </motion.span>
-                  
+                  ))}
               </motion.span>
             </div>
           </div>
@@ -132,8 +134,9 @@ const ProjectModel = ({ project }) => {
                   transition={transition}
                 >
                   <motion.img
-                    layoutId={``} // Add this
-                    src=""
+                    layoutId={`project-image-${project.id}`} // Add this
+                    src={project.image}
+                    alt={project.title}
                     style={{ scale: scale }}
                     initial={{ scale: 1.0 }}
                     animate={{
@@ -156,9 +159,9 @@ const ProjectModel = ({ project }) => {
       <div className="">
         <div className="justify-between items-start">
           <div className="space-y-4">
-            <h2 className="sm:text-3xl text-2xl"></h2>
-            <p></p>
-            <Link>
+            <h2 className="sm:text-3xl text-2xl">{project.description}</h2>
+            <p>{project.longerdescription}</p>
+            <Link href={project.link}>
               <p className="text-lg font-semibold underline cursor-pointer">
                 Visit project
               </p>
