@@ -35,7 +35,7 @@ function Projectcard(props) {
       </div>
       <div className="cursor-pointer border-2 border-black rounded-2xl m-10 hover:bg-black">
       <Link href={`/projects/${props.project.slug}`}>
-          <a className="text-center p-2 hover:text-white">See project</a> 
+          <span className="text-center p-2 hover:text-white">See project</span> 
         </Link>
       </div>
     </div>
