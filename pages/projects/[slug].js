@@ -19,10 +19,11 @@ export async function getStaticPaths() {
     params: { slug: project.slug },
   }));
 
-  console.log(paths); // Debug: log the paths
+  console.log('Generated paths:', paths); // Log all the paths
 
   return { paths, fallback: true };
 }
+
 
 
 export async function getStaticProps({ params }) {
