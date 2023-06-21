@@ -165,11 +165,15 @@ const ProjectModel = ({ project }) => {
           <div className="space-y-4">
             <h2 className="sm:text-3xl text-2xl">{project?.description}</h2>
             <p>{project?.longerdescription}</p>
-            <Link href={project?.link}>
-              <p className="text-lg font-semibold underline cursor-pointer">
-                Visit project
-              </p>
-            </Link>
+            {project.link ? (
+              <Link href={project.link}>
+                <p className="text-lg font-semibold underline cursor-pointer">
+                  Visit project
+                </p>
+              </Link>
+            ) : (
+              <p className="text-lg font-semibold">Link not available</p>
+            )}
           </div>
         </div>
       </div>
