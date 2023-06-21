@@ -134,7 +134,7 @@ const ProjectModel = ({ project }) => {
                   transition={transition}
                 >
                   <motion.img
-                    layoutId={`project-image-${project.id}`} // Add this
+                    layoutId={``} // Add this
                     src={project.image}
                     alt={project.title}
                     style={{ scale: scale }}
