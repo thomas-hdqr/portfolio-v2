@@ -90,7 +90,7 @@ const ProjectModel = ({ project }) => {
                     />
                   </svg>
                 </Link>
-                <div className="">{project.tech}</div>
+                <div className=""></div>
               </div>
             </motion.div>
 
